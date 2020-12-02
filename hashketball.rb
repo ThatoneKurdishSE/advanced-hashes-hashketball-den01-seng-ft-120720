@@ -171,5 +171,6 @@ def player_numbers(jersey)
 end
 def player_stats(players_name)
   game_hash.each do |team, team_info|
-    team_info.each do 
+    team_info.each do |k, v|
+      
 end
