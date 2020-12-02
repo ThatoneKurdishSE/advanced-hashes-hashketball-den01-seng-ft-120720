@@ -169,12 +169,12 @@ def player_numbers(jersey)
   end
   return output
 end
-def player_stats(players_name)
+def player_stats(players_name="Jeff Adrien")
   game_hash.each do |team, team_info|
     team_info.each do |k, v|
       if k==:players
         v.each do |player|
-          if players_name== player[:player_name=>"Jeff Adrien"]
+          if players_name== player[:player_name]
             player.delete(:player_name)
             return player
           end
