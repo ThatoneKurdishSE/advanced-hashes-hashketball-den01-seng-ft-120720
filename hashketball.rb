@@ -125,5 +125,32 @@ def game_hash
     }
   }
 end
-
-# Write code here
+def num_points_scored(player_search)
+  game_hash.each do |team, team_info|
+    team_info[:players].each do |player|
+      if player[:player_name] == player_search
+        return player[:points]
+      end
+    end
+  end
+end
+def shoe_size(player_size)
+  game_hash.each do |team, team_info|
+    team_info[:players].each do |player|
+      if player[:player_name]== player_size
+        return player[:shoe]
+      end
+    end
+  end
+end
+def team_colors(team_color)
+  if team_color.downcase == "charlotte hornets" 
+    return game_hash[:away][:colors]
+  else return game_hash[:home][:colors]
+  end
+end
+def team_names
+  return game_hash[:home][:team_name]
+  return game_hash[:away][:team_name]
+end
+end
