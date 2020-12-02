@@ -154,12 +154,18 @@ game_hash.map do |team, team_info|
   team_info[:team_name]
 end
 end
-def player_numbers(jersey_number)
-    game_hash.each do |team, team_info|
-    team_info[:players].each do |player|
-      if player[:player_name]== jersey_number
-        return player[:number]
+def player_numbers(jersey)
+  output = []
+  game_hash.each do |team, team_info|
+    if team_info[:team_name] == jersey
+      team_info.each do |key, value|
+        if key == :players
+          value.each do |player|
+          output.push(player[:number])
+          end
+        end
       end
     end
   end
+  return output
 end
