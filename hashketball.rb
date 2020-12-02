@@ -169,3 +169,6 @@ def player_numbers(jersey)
   end
   return output
 end
+def player_stats(players_name)
+  
+end
