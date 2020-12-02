@@ -174,7 +174,7 @@ def player_stats(players_name)
     team_info.each do |k, v|
       if k==:players
         v.each do |player|
-          if players_name== player[:player_name]
+          if players_name== player[:player_name=>"Jeff Adrien"]
             player.delete(:player_name)
             return player
           end
