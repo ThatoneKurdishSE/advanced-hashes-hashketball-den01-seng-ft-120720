@@ -172,6 +172,6 @@ end
 def player_stats(players_name)
   game_hash.each do |team, team_info|
     team_info.each do |k, v|
-      if k==[:players]
-        v.each do
+      if k==:players
+        v.each do |player|
 end
