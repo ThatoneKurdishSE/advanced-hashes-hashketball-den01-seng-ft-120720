@@ -152,7 +152,7 @@ end
 def team_names
 game_hash.map do |team, team_info|
   return[:away][:team_name]
-  return
+  return[:home][:team_name]
 end
 end
 end
